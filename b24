@@ -8,5 +8,28 @@ After you have added your php.ini/phprc file, add these lines to the file (just 
 
 extension = phar.so 
 suhosin.executor.include.whitelist = phar
+
+
+OR
+
+
+https://stackoverflow.com/questions/34028282/composer-command-not-found/72620707#72620707
+
+
+
+I am using CentOS and had same problem.
+
+I changed /usr/local/bin/composer to /usr/bin/composer and it worked.
+
+Run below command :
+
+curl -sS https://getcomposer.org/installer | php 
+ sudo mv composer.phar /usr/bin/composer
+
+Verify Composer is installed or not
+
+composer --version
+
+
 ---------------------------------------------------------------------------------------
 
