@@ -1,0 +1,12 @@
+Install Composer (Phar fix) PHP Version 7.4.28:
+
+https://stackoverflow.com/questions/22047487/how-do-i-install-enable-the-php-phar-extension
+
+You can modify your php.ini (/etc/php.ini) file to get this working. (Some hosts use a phprc file to enable different settings in PHP instead of php.ini. @jerrygarciuh On dreamhost, follow the directions here)
+
+After you have added your php.ini/phprc file, add these lines to the file (just the first line if your server doesn't use Suhosin for security):
+
+extension = phar.so 
+suhosin.executor.include.whitelist = phar
+---------------------------------------------------------------------------------------
+
